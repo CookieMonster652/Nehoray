@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+    <TextView
+        android:id="@+id/SundayUserRequestText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:fontFamily="@font/assistant_semibold"
+        android:gravity="center"
+        android:text="Sunday 11.4"
+        app:layout_constraintTop_toTopOf="parent"
+        android:textColor="@color/carbon_black_87"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintWidth_percent=".9" />
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/SundayUserRequestRecyclerView"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/_5sdp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/SundayUserRequestText"
+        app:layout_constraintWidth_percent=".9" />
+
+    <TextView
+        android:id="@+id/MondayUserRequestText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:fontFamily="@font/assistant_semibold"
+        android:gravity="center"
+        android:text="Monday"
+        android:textColor="@color/carbon_black_87"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/SundayUserRequestRecyclerView"
+        app:layout_constraintWidth_percent=".9" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/MondayUserRequestRecyclerView"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/_5sdp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/MondayUserRequestText"
+        app:layout_constraintWidth_percent=".9" />
+
+    <TextView
+        android:id="@+id/TuesdayUserRequestText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:fontFamily="@font/assistant_semibold"
+        android:gravity="center"
+        android:text="Tuesday"
+        android:textColor="@color/carbon_black_87"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/MondayUserRequestRecyclerView"
+        app:layout_constraintWidth_percent=".9" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/TuesdayUserRequestRecyclerView"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/_5sdp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/TuesdayUserRequestText"
+        app:layout_constraintWidth_percent=".9" />
+    <TextView
+        android:id="@+id/WednesdayUserRequestText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:fontFamily="@font/assistant_semibold"
+        android:gravity="center"
+        android:text="Wednesday"
+        android:textColor="@color/carbon_black_87"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/TuesdayUserRequestRecyclerView"
+        app:layout_constraintWidth_percent=".9" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/WednesdayUserRequestRecyclerView"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/_5sdp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/WednesdayUserRequestText"
+        app:layout_constraintWidth_percent=".9" />
+
+
+    <TextView
+        android:id="@+id/ThursdayUserRequestText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:fontFamily="@font/assistant_semibold"
+        android:gravity="center"
+        android:text="Thursday"
+        android:visibility="gone"
+        android:textColor="@color/carbon_black_87"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/WednesdayUserRequestRecyclerView"
+        app:layout_constraintWidth_percent=".9" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/ThursdayUserRequestRecyclerView"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/_5sdp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ThursdayUserRequestText"
+        app:layout_constraintWidth_percent=".9" />
+
+
+    <TextView
+        android:id="@+id/FridayUserRequestText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:fontFamily="@font/assistant_semibold"
+        android:gravity="center"
+        android:text="Friday"
+        android:textColor="@color/carbon_black_87"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ThursdayUserRequestRecyclerView"
+        app:layout_constraintWidth_percent=".9" />
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/FridayUserRequestRecyclerView"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/_5sdp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginBottom="@dimen/_5sdp"
+        app:layout_constraintTop_toBottomOf="@+id/FridayUserRequestText"
+        app:layout_constraintWidth_percent=".9" />
+
+    <TextView
+        android:id="@+id/SaturdayUserRequestText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:fontFamily="@font/assistant_semibold"
+        android:gravity="center"
+        android:text="Saturday"
+        android:textColor="@color/carbon_black_87"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/FridayUserRequestRecyclerView"
+        app:layout_constraintWidth_percent=".9" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/SaturdayUserRequestRecyclerView"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/_5sdp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginBottom="@dimen/_5sdp"
+        app:layout_constraintTop_toBottomOf="@+id/SaturdayUserRequestText"
+        app:layout_constraintWidth_percent=".9" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </ScrollView>

@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".UI.ManagerFragement.ManageWorkers">
+
+
+        <TextView
+            android:id="@+id/Date"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:fontFamily="@font/assistant_semibold"
+            android:gravity="center"
+            android:textColor="@color/carbon_black_87"
+            android:textSize="@dimen/_15ssp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintWidth_percent=".9" />
+
+
+        <TextView
+            android:id="@+id/Title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:gravity="center"
+            android:maxLines="1"
+            android:fontFamily="@font/sssistant_regular"
+            android:text="@string/my_regular_list"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/Date"
+            app:layout_constraintWidth_percent=".9" />
+
+
+        <ImageView
+            android:id="@+id/Icon"
+            app:layout_constraintTop_toBottomOf="@+id/Title"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintWidth_percent=".1"
+            app:tint = "@color/carbon_black_54"
+            android:visibility="gone"
+            app:layout_constraintVertical_chainStyle="packed"
+            android:src="@drawable/ic_workers"
+            app:layout_constraintBottom_toTopOf="@+id/Message"
+            android:layout_width="0dp"
+            android:layout_height="0dp"/>
+
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/Message"
+            android:fontFamily="@font/roboto_regular"
+            app:layout_constraintTop_toBottomOf="@id/Icon"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/AddEmployees"
+            android:layout_marginTop="@dimen/_7sdp"
+            android:text="@string/add_employees"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/EmployeesRecyclerView"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginBottom="@dimen/_10sdp"
+            app:layout_constraintBottom_toTopOf="@+id/AddEmployees"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/Title"
+            app:layout_constraintWidth_percent=".9" />
+
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/AddEmployees"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginBottom="@dimen/_15sdp"
+            android:background="@drawable/addemployeesbutton_bg"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/SendToMyList"
+            app:layout_constraintHeight_percent=".07"
+            app:layout_constraintStart_toStartOf="parent"
+            app:shapeAppearanceOverlay="@style/shape_button" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/SendToMyList"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@drawable/button_bg"
+            app:layout_constraintBottom_toBottomOf="@+id/AddEmployees"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/AddEmployees"
+            app:layout_constraintTop_toTopOf="@+id/AddEmployees"
+            app:shapeAppearanceOverlay="@style/shape_button" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="@string/send_to_my_list"
+            android:fontFamily="@font/assistant_semibold"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="@+id/SendToMyList"
+            app:layout_constraintEnd_toEndOf="@+id/SendToMyList"
+            app:layout_constraintStart_toStartOf="@+id/SendToMyList"
+            app:layout_constraintTop_toTopOf="@+id/SendToMyList"
+            app:layout_constraintWidth_percent=".4" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:singleLine="true"
+            android:fontFamily="@font/assistant_semibold"
+            android:text="@string/add_employees"
+            android:textColor="@color/carbon_black_87"
+            app:layout_constraintBottom_toBottomOf="@+id/AddEmployees"
+            app:layout_constraintEnd_toEndOf="@+id/AddEmployees"
+            app:layout_constraintStart_toStartOf="@+id/AddEmployees"
+            app:layout_constraintTop_toTopOf="@+id/AddEmployees"
+            app:layout_constraintWidth_percent=".4" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

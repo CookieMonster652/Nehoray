@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".UI.Manager.MySchedule">
+
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:background="#F9F9F9"
+            android:padding="@dimen/_10sdp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/PreviousShiftText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/assistant_semibold"
+                android:text="@string/previous_shift"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/PreviousShiftBtn"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginTop="@dimen/_7sdp"
+                android:background="@drawable/nextpriviousbutton_bg"
+                app:layout_constraintDimensionRatio="1:1"
+                app:layout_constraintStart_toStartOf="@id/PreviousShiftText"
+                app:layout_constraintTop_toBottomOf="@+id/PreviousShiftText"
+                app:layout_constraintWidth_percent=".09">
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:src="@drawable/arrawback_icon"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintDimensionRatio="1.1"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintWidth_percent=".5"
+                    app:tint="@color/carbon_black_54" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <TextView
+                android:id="@+id/NextShiftText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/assistant_semibold"
+                android:text="@string/next_shift"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/NextShiftBtn"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginTop="@dimen/_7sdp"
+                android:background="@drawable/nextpriviousbutton_bg"
+                app:layout_constraintDimensionRatio="1:1"
+                app:layout_constraintEnd_toEndOf="@+id/NextShiftText"
+                app:layout_constraintTop_toBottomOf="@+id/NextShiftText"
+                app:layout_constraintWidth_percent=".09">
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:src="@drawable/ic_next"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintDimensionRatio="1:1"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintWidth_percent=".5"
+                    app:tint="@color/carbon_black_54" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <TextView
+                android:id="@+id/Date"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_20sdp"
+                android:layout_marginEnd="@dimen/_20sdp"
+                android:fontFamily="@font/assistant_bold"
+                android:gravity="center"
+                app:layout_constraintBottom_toTopOf="@+id/ShiftSpinner"
+                app:layout_constraintEnd_toStartOf="@+id/NextShiftBtn"
+                app:layout_constraintStart_toEndOf="@+id/PreviousShiftBtn"
+                app:layout_constraintTop_toTopOf="@+id/NextShiftText" />
+
+
+
+            <Spinner
+                android:id="@+id/ShiftSpinner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                app:layout_constraintBottom_toBottomOf="@+id/NextShiftBtn"
+                app:layout_constraintEnd_toStartOf="@+id/NextShiftBtn"
+                app:layout_constraintStart_toEndOf="@+id/PreviousShiftBtn"
+                app:layout_constraintTop_toBottomOf="@+id/Date" />
+
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/AdditionHoursTimeRV"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                android:layout_width="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/RefuseUserRecyclerView"
+                app:layout_constraintBottom_toBottomOf="@+id/RefuseUserRecyclerView"
+                android:layout_height="0dp"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/RefuseUserRecyclerView"
+                android:layout_marginTop="@dimen/_10sdp"
+                app:layout_constraintHeight_percent=".25"
+                android:background="@drawable/schedulebgtop"
+                android:layout_width="0dp"
+                app:layout_constraintEnd_toEndOf="@+id/NextShiftBtn"
+                app:layout_constraintStart_toEndOf="@+id/AdditionHoursTimeRV"
+                app:layout_constraintTop_toBottomOf="@+id/PreviousShiftBtn"
+                android:layout_height="0dp"/>
+
+            <View
+                android:id="@+id/View"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/RefuseUserRecyclerView"
+                android:background="#019FA2"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_1sdp"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/RegistrationUseListRecyclerView"
+                android:layout_width="0dp"
+                android:background="@drawable/schedulebgbottom"
+                android:layout_height="0dp"
+                app:layout_constraintHeight_percent=".25"
+                app:layout_constraintEnd_toEndOf="@+id/RefuseUserRecyclerView"
+                app:layout_constraintStart_toStartOf="@+id/RefuseUserRecyclerView"
+                app:layout_constraintTop_toBottomOf="@+id/View" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/HoursRV"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/RegistrationUseListRecyclerView"
+                app:layout_constraintBottom_toBottomOf="@+id/RegistrationUseListRecyclerView"
+                android:layout_width="wrap_content"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                android:layout_height="0dp"/>
+
+            <TextView
+                android:id="@+id/CounterUser"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:fontFamily="@font/assistant_semibold"
+                android:gravity="center"
+                android:text="This shift has 0 employees out of 0 who are needed"
+                android:textColor="#333333"
+                app:layout_constraintEnd_toEndOf="@+id/RegistrationUseListRecyclerView"
+                app:layout_constraintStart_toStartOf="@+id/RegistrationUseListRecyclerView"
+                app:layout_constraintTop_toBottomOf="@+id/RegistrationUseListRecyclerView" />
+
+            <ProgressBar
+                android:id="@+id/ProgressID"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_3sdp"
+                app:layout_constraintEnd_toEndOf="@+id/CounterUser"
+                app:layout_constraintStart_toStartOf="@+id/CounterUser"
+                app:layout_constraintTop_toBottomOf="@+id/CounterUser" />
+
+            <TextView
+                android:id="@+id/ProgressBarText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/sssistant_regular"
+                android:text="0%"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ProgressID" />
+
+            <EditText
+                android:id="@+id/SearchInput"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:background="@drawable/uploadprofilepicbutton_bg"
+                android:fontFamily="@font/assistant_semibold"
+                android:gravity="center"
+                android:hint="@string/search_by_name"
+                android:padding="@dimen/_8sdp"
+                android:editable="false"
+                android:singleLine="true"
+                app:layout_constraintEnd_toEndOf="@+id/ProgressID"
+                app:layout_constraintStart_toStartOf="@+id/ProgressID"
+                app:layout_constraintTop_toBottomOf="@+id/ProgressBarText"
+                app:layout_constraintWidth_percent=".9" />
+
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/ConfirmAndSendBtn"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_38sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginBottom="@dimen/_20sdp"
+                android:background="@drawable/button_bg"
+                android:onClick="LoginEmployeeClick"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHeight_percent=".07"
+                app:layout_constraintStart_toStartOf="parent"
+                android:visibility="gone"
+                app:layout_constraintTop_toBottomOf="@+id/SearchInput"
+                app:layout_constraintWidth_percent=".9"
+                app:shapeAppearanceOverlay="@style/shape_button" />
+
+
+
+
+            <TextView
+                android:id="@+id/ZeroShiftText"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:text="@{`0 ` + @string/Shift }"
+                app:layout_constraintTop_toBottomOf="@+id/ConfirmAndSendBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/ZeroShiftRecyclerView"
+                android:layout_width="match_parent"
+                app:layout_constraintTop_toBottomOf="@+id/ZeroShiftText"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_height="wrap_content"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/MyScheduleRecyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/_15sdp"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ZeroShiftRecyclerView" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.core.widget.NestedScrollView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

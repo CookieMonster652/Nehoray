@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/ManageWorkers"
+        android:icon="@drawable/ic_workers"
+        android:title="@string/manage_workers"
+        app:cnb_backgroundColor="@color/white"
+        app:cnb_iconColor="@color/carbon_black_54"
+        app:cnb_textColor="@color/carbon_black_54"
+        />
+
+    <item
+        android:id="@+id/WhoNotConfrim"
+        android:icon="@drawable/ic_decline"
+        android:title="@string/not_confrim"
+        app:cnb_backgroundColor="@color/white"
+        app:cnb_iconColor="@color/carbon_black_54"
+        app:cnb_textColor="@color/carbon_black_54"
+        />
+
+    <item
+        android:id="@+id/DailySchedule"
+        android:icon="@drawable/ic_calender"
+        android:title="@string/daily_schedule"
+        app:cnb_backgroundColor="@color/white"
+        app:cnb_iconColor="@color/carbon_black_54"
+        app:cnb_textColor="@color/carbon_black_54"
+        />
+
+    <item
+        android:id="@+id/PreviousWeeks"
+        android:icon="@drawable/ic_privious"
+        android:title="@string/previous_weeks"
+        app:cnb_backgroundColor="@color/white"
+        app:cnb_iconColor="@color/carbon_black_54"
+        app:cnb_textColor="@color/carbon_black_54"
+        />
+
+</menu>

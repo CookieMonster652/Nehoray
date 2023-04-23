@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".UI.Manager.SendEmployeeSheduleTime">
+
+
+        <include
+            android:id="@+id/Toolbar"
+            layout="@layout/toolbar"/>
+
+        <View
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:background="#F9F9F9"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"/>
+
+
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            app:layout_constraintTop_toBottomOf="@id/Toolbar"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_width="match_parent"
+            android:layout_height="0dp">
+
+            <TextView
+                android:id="@+id/Title"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_width="0dp"
+                android:textSize="@dimen/_18ssp"
+                app:layout_constraintTop_toTopOf="parent"
+                android:fontFamily="@font/assistant_semibold"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:text="@string/when_would_you_like_to_send_your_employees_the_schedule"
+                app:layout_constraintWidth_percent=".9"
+                android:layout_height="wrap_content"/>
+
+
+            <ScrollView
+                app:layout_constraintTop_toBottomOf="@+id/Title"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toTopOf="@id/Box"
+                app:layout_constraintWidth_percent=".9"
+                android:layout_width="0dp"
+                android:layout_margin="@dimen/_5sdp"
+                android:layout_height="0dp">
+
+                <TextView
+                    android:text="@string/scheduleregistration_note"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/sssistant_regular"
+                    android:gravity="center"
+                    android:textSize="@dimen/_12ssp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+            </ScrollView>
+
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/Box"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginBottom="@dimen/_20sdp"
+                app:layout_constraintWidth_percent=".8"
+                app:layout_constraintDimensionRatio="1:.5"
+                android:background="@drawable/sendschedultime_bg"
+                app:layout_constraintBottom_toTopOf="@+id/ConfirmButton"
+                android:layout_width="0dp"
+                android:layout_height="0dp">
+
+                <EditText
+                    android:id="@+id/ScheduleStartTime"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintWidth_percent=".85"
+                    app:layout_constraintDimensionRatio="1:.18"
+                    android:padding="@dimen/_7sdp"
+                    android:editable="false"
+                    android:singleLine="true"
+                    android:gravity="center"
+                    android:elevation="0.5dp"
+                    android:fontFamily="@font/sssistant_regular"
+                    android:hint="@string/when_to_send_the_schedule"
+                    app:layout_constraintBottom_toTopOf="@+id/RegistrationEnd"
+                    android:background="@drawable/shedule_edittext_bg"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"/>
+
+                <EditText
+                    android:id="@+id/RegistrationEnd"
+                    app:layout_constraintTop_toBottomOf="@+id/ScheduleStartTime"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintWidth_percent=".85"
+                    android:elevation="0.5dp"
+                    android:editable="false"
+                    android:gravity="center"
+                    android:fontFamily="@font/sssistant_regular"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintDimensionRatio="1:.18"
+                    android:padding="@dimen/_7sdp"
+                    android:hint="@string/registration_for_shifts_ends_at"
+                    android:background="@drawable/shedule_edittext_bg"
+                    android:singleLine="true"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"/>
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/ConfirmButton"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginBottom="@dimen/_15sdp"
+                app:shapeAppearanceOverlay="@style/shape_button"
+                android:background="@drawable/button_bg"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintDimensionRatio="1:.18"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintWidth_percent=".8"/>
+
+
+            <TextView
+                android:layout_width="0dp"
+                app:layout_constraintTop_toTopOf="@+id/ConfirmButton"
+                app:layout_constraintBottom_toBottomOf="@+id/ConfirmButton"
+                app:layout_constraintStart_toStartOf="@+id/ConfirmButton"
+                app:layout_constraintEnd_toEndOf="@+id/ConfirmButton"
+                android:gravity="center"
+                android:singleLine="true"
+                app:layout_constraintWidth_percent=".7"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/assistant_semibold"
+                android:text="@string/confirm"
+                android:textColor="@color/white"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".UI.Manager.ImportEmployees">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:background="#F9F9F9"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Toolbar" />
+
+        <include
+            android:id="@+id/Toolbar"
+            layout="@layout/toolbar" />
+
+        <TextView
+            android:id="@+id/Title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:fontFamily="@font/assistant_semibold"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="@string/import_employees"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_14ssp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/Toolbar"
+            app:layout_constraintWidth_percent=".8" />
+
+        <EditText
+            android:id="@+id/SearchInput"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:background="@drawable/edittext_bg"
+            android:fontFamily="@font/sssistant_regular"
+            android:gravity="center"
+            android:hint="@string/search"
+            android:singleLine="true"
+            app:layout_constraintDimensionRatio="1:.17"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Title"
+            app:layout_constraintWidth_percent=".7" />
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/RecyclerViewEmployees"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_marginBottom="@dimen/_5sdp"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintBottom_toTopOf="@+id/HowManyEmployeesSelect"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/SearchInput"
+            app:layout_constraintWidth_percent=".9" />
+
+        <TextView
+            android:id="@+id/HowManyEmployeesSelect"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:fontFamily="@font/sssistant_regular"
+            android:gravity="center"
+            android:singleLine="true"
+            android:visibility="gone"
+            android:text="One employees was select"
+            app:layout_constraintBottom_toTopOf="@+id/ImportEmployeesButton"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintWidth_percent=".8" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/ImportEmployeesButton"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginBottom="@dimen/_15sdp"
+            android:background="@drawable/button_bg"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintDimensionRatio="1:.17"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintWidth_percent=".9"
+            app:shapeAppearanceOverlay="@style/shape_button" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/assistant_semibold"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="@string/import_employees_from_contact"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="@+id/ImportEmployeesButton"
+            app:layout_constraintEnd_toEndOf="@+id/ImportEmployeesButton"
+            app:layout_constraintStart_toStartOf="@+id/ImportEmployeesButton"
+            app:layout_constraintTop_toTopOf="@+id/ImportEmployeesButton"
+            app:layout_constraintWidth_percent=".8" />
+
+
+        <ImageView
+            android:id="@+id/SearchIcon"
+            app:layout_constraintTop_toBottomOf="@+id/SearchInput"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:visibility="gone"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintWidth_percent=".15"
+            app:tint  ="@color/carbon_black_54"
+            app:layout_constraintBottom_toTopOf="@+id/SearchMessage"
+            app:layout_constraintVertical_chainStyle="packed"
+            android:src="@drawable/ic_search"
+            android:layout_width="0dp"
+            android:layout_height="0dp"/>
+
+        <TextView
+            android:id="@+id/SearchMessage"
+            app:layout_constraintBottom_toTopOf="@+id/ImportEmployeesButton"
+            app:layout_constraintTop_toBottomOf="@+id/SearchIcon"
+            android:layout_marginTop="@dimen/_5sdp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:visibility="gone"
+            android:text="לא נמצאו תוצאות"
+            android:layout_width="wrap_content"
+            android:fontFamily="@font/sssistant_regular"
+            android:textSize="@dimen/_12ssp"
+            android:gravity="center"
+            android:layout_height="wrap_content"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

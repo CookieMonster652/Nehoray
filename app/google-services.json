@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "666464987713",
+    "project_id": "timing-mvvm",
+    "storage_bucket": "timing-mvvm.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:666464987713:android:946d61d930cff8c019b4c0",
+        "android_client_info": {
+          "package_name": "com.time.timing"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "666464987713-5vflmahk54rd190f21iedohhtma7ffoc.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.time.timing",
+            "certificate_hash": "c98cacbfe4bc9f4f523e9c6e51347a2ceffca213"
+          }
+        },
+        {
+          "client_id": "666464987713-t9ojv1h47jk18m22fpr8tqqr866e49er.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD4BlNMEyyhhPzaB5ApJ4M-u5JloHHuNtI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "666464987713-t9ojv1h47jk18m22fpr8tqqr866e49er.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

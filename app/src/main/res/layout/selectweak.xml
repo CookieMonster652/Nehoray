@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#F9F9F9"
+        tools:context=".UI.ManagerSignIn.SelectWeak">
+
+        <include
+            android:id="@+id/ToolbarLayout"
+            layout="@layout/toolbar"/>
+
+        <TextView
+            app:layout_constraintTop_toBottomOf="@+id/ToolbarLayout"
+            android:id="@+id/UserName"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:textColor="@color/carbon_black_87"
+            android:fontFamily="@font/assistant_semibold"
+            android:textSize="@dimen/_14ssp"
+            android:text="Hello Sajib"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+
+        <TextView
+            app:layout_constraintVertical_chainStyle="packed"
+            android:id="@+id/EditDays"
+            android:text="Click to Edit Days:"
+            android:fontFamily="@font/sssistant_regular"
+            android:layout_marginTop="@dimen/_25sdp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/UserName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/RecyclerViewDate"
+            android:layout_width="match_parent"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_height="0dp"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/EditDays" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

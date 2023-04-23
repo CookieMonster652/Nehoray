@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_width="match_parent"
+        android:background="@color/ManagerBackGround"
+        android:layout_height="?attr/actionBarSize">
+
+        <ImageView
+            android:id="@+id/BackButton"
+            android:layout_marginStart="@dimen/_15sdp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:tint="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintHeight_percent=".5"
+            app:layout_constraintDimensionRatio="1:1"
+            android:src="@drawable/ic_baseline_arrow_back_24"
+            android:layout_width="0dp"
+            android:layout_height="0dp"/>
+
+
+        <TextView
+            android:textColor="@color/white"
+            android:text="Title"
+            android:singleLine="true"
+            android:fontFamily="@font/assistant_bold"
+            android:id="@+id/Title"
+            android:textSize="@dimen/_14ssp"
+            app:layout_constraintTop_toTopOf="@+id/BackButton"
+            android:layout_marginStart="@dimen/_15sdp"
+            app:layout_constraintStart_toEndOf="@+id/BackButton"
+            app:layout_constraintBottom_toBottomOf="@+id/BackButton"
+            android:layout_width="0dp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:layout_height="wrap_content"/>
+
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

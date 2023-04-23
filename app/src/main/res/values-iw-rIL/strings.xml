@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">טיימינג</string>
+
+
+    <string name="TConsition">
+        ,גולש/ת יקר
+ להלן תקנון המפרט את תנאי הגלישה באפליצקיית
+ טימינג,כתובת וכ (להלן: "החברה"). אנא קרא/י
+.בעיון את התקנון בטרם התחלת הגלישה באתר\n
+
+ למען הסר ספק יובהר בזאת כי עצם הגלישה באתר
+.מהווה מתן הסכמתך לתנאים המפורטים בתקנון\n
+
+ כל המידע המופיע בתקנון נכתב בלשון זכר למטרות
+ נוחות בלבד אולם הוא מתייחס גם ללשון נקבה וכל
+, האמור בלשון יחיד מתייחס גם ללשון רבים ולהיפך
+.אלא אם נכתב אחרת במפורש\n
+
+כללי והגדרות
+:בתקנון זה
+ גלישה" - לרבות באמצעות האינטרנט, טלפון"
+.סלולרי או בכל אמצעי מדיה אחר
+, שימוש" – לרבות צפייה, העתקה, עריכה, שכתוב"
+, ציטוט, הפצה בכל דרך או אמצעי, הצגה, הקלטה
+.צילום וידאו וכיוצא בזה\n
+ מידע" או "תוכן" - מידע מכל מין וסוג, לרבות תוכן"
+ מילולי, חזותי, קולי, קוד, תוכנת מחשב, או כל שילוב
+ שלהם וכן עיצובם, עיבודם, עריכתם, הפצתם ודרך
+.הצגתם\n
+כללי התנהגות בעת גלישה באתר
+ הגולש מצהיר ומחייב כי הוא קרא והבין את התנאים
+ המפורטים בתקנון זה וכי הוא מסכים להם וכי עצם
+.גלישתו באתר מהווה הסכמה לתוכנו
+    </string>
+
+
+    <string name="terms_condition">בשליחת הקוד אני מאשר
+את תנאי השימוש</string>
+
+    <string name="enter_phone_number">הקש מספר טלפון</string>
+    <string name="send_me_a_verification_code">שלח לי קוד התחברות</string>
+    <string name="skip">דלג</string>
+    <string name="sign_in_for_employees">הרשמה לעובדים</string>
+    <string name="ok">בסדר</string>
+    <string name="terms_and_condition">תנאים</string>
+    <string name="sign_in_for_manager">הרשמה למנהלים</string>
+    <string name="login_employee">התחברות לעובדים</string>
+    <string name="login_manager">התחברות למנהלים</string>
+    <string name="upload_profile_picture">העלה תמונת פרופיל</string>
+    <string name="pictureperpose">מה נעשה עם התמונה שלך? אנו נציג זאת לעמיתיך לעבודה ולמעסיק שלך בלבד.</string>
+    <string name="btncontinue">לְהַמשִׁיך</string>
+    <string name="name">שֵׁם</string>
+    <string name="verification_code">קוד אימות</string>
+    <string name="please_type_the_verification_code_send_to">אנא הקלד את קוד האימות שנשלח אל</string>
+    <string name="i_didn_t_receive_a_code">לא קיבלתי קוד.</string>
+    <string name="click_to_resent">לחץ כדי להתרעם</string>
+    <string name="import_employees">יבוא עובדים</string>
+    <string name="search">חיפוש</string>
+    <string name="import_employees_from_contact">יבוא עובדים מאנשי קשר</string>
+    <string name="personal_info">פרטים אישיים</string>
+    <string name="daily_schedule">לוח
+יומי</string>
+    <string name="number">מספר</string>
+    <string name="no_details_can_be_edited_at_this_time">.בשלב זה לא ניתן לערוך פרטים</string>
+    <string name="confirm">אישור</string>
+    <string name="my_profile">הפרטים שלי</string>
+    <string name="registration_for_shifts_ends_in">...ההרשמה למשמרות נגמרת בעוד</string>
+    <string name="welcome_to_the_timing_app_nhere_you_can_sign_up_and_see_your_shifts">.ברוך הבא לאפליקציית Timing
+.כאן תוכל להירשם ולראות את המשמרות שלך</string>
+    <string name="confirm_send">אשר ושלח</string>
+    <string name="Select_Schedule">בחר לוח זמנים</string>
+    <string name="PersonalInfo">מידע אישי</string>
+    <string name="DailySchedule">לוח זמנים יומי</string>
+    <string name="d">ד</string>
+    <string name="h">ח</string>
+    <string name="m">M</string>
+    <string name="s">ס</string>
+    <string name="manage_workers">ניהול עובדים</string>
+    <string name="not_confrim">לא מאשר</string>
+    <string name="previous_weeks">שבועות קודמים</string>
+    <string name="click_to_edit_days">: לחץ על ימים לעריכה</string>
+    <string name="add_employees">הוסף עובדים</string>
+    <string name="send_to_my_list">שלח לרשימה שלי</string>
+    <string name="previous_nweek">שבוע\nשעבר</string>
+    <string name="next_nweek">שבוע\nהבא</string>
+    <string name="no_schedule_found">לא נמצא לוח זמנים</string>
+    <string name="my_regular_list">הרשימה הקבועה שלי</string>
+
+    <string name="who_did_not_confirm">מי לא אישר</string>
+    <string name="successfullysend_schedule">שלחת בהצלחה את לוח\nהזמנים!</string>
+    <string name="feel_free_to_make_the_final_adjustments_to_your_shifts">אתה מוזמן לבצע את ההתאמות האחרונות במשמרות שלך.</string>
+    <string name="You_need_to_sign_up_for_at_least">אתה צריך להירשם לפחות</string>
+    <string name="Shift">מִשׁמֶרֶת</string>
+    <string name="Welcome">ברוך הבא</string>
+    <string name="to_register">להירשם</string>
+    <string name="You_have_selected_only">בחרת בלבד</string>
+    <string name="shift_out_of">לעבור החוצה</string>
+    <string name="needed">נָחוּץ</string>
+    <string name="This_shift_has">במשמרת זו</string>
+    <string name="employees_out_of">עובדים מתוך</string>
+    <string name="who_are_needed">מבוקשים</string>
+    <string name="Select_Shift">בחר מִשׁמֶרֶת</string>
+    <string name="Shift_start_time_empty">שעת התחלה של משמרת ריקה</string>
+    <string name="Shift_end_time_empty">שעת סיום משמרת ריקה</string>
+    <string name="Number_of_worker_empty">מספר העובד ריק</string>
+    <string name="Additional_hours_empty">שעות נוספות ריקות</string>
+    <string name="Minimum_shift_par_worker_empty">מינימום משמרת לפי עובד ריק</string>
+    <string name="shift_start_time">שעת התחלה של משמרת</string>
+    <string name="shift_end_time">הסט זמן סיום</string>
+    <string name="number_of_workers_for_this_shift">מספר עובדים למשמרת זו</string>
+    <string name="additional_hours_you_want_to_appear_on_the_schedule">שעות נוספות שתרצו שיופיעו בלוח הזמנים</string>
+    <string name="minimal_shift_par_worker">עובד מינימום משמרת</string>
+    <string name="what_is_this">מה זה?</string>
+    <string name="apply_additional_shift">הוספת משמרת נוספת</string>
+    <string name="apply_shift_to_additional_days">החלה על ימים נוספים</string>
+    <string name="show_weekly_schedule">הצג לו"ז שבועי</string>
+    <string name="explanation">הסבר</string>
+    <string name="explaindetails">אם המשמרת שלכם מתחילה בשעה שבע אך אתם לא מעונינים שכל העובדים יגיעו על ההתחלה אלה שניים בתחילת המשמרת וכל השאר רק בעשר אז ליחצו על השעה עשר ובלו ז יופיע קו באותה שעה שבחרתם ואז שתרצו לשבץ עבדים תוכלו לרשום מי מגיע בתחילת משמרת ומי בשעה עשר. על אותה הדרך כמה שעות שתרצו לראות בלו ז</string>
+    <string name="do_you_want_the_schedule_to_apply_to_other_days">האם אתה רוצה שהלוח יחול על ימים אחרים?</string>
+    <string name="Select_Days">בחר ימים</string>
+    <string name="Invite_to_worker">הזמנה לעובד</string>
+    <string name="invite_workers_for_this_schedule">הזמן עובדים ללוח זמנים זה</string>
+    <string name="click_to_edit">לחץ כדי לערוך</string>
+    <string name="invite_employees_text">על מנת לצרף עובדים לאפליקציה,
+אנא שלח להם את הקישור,
+וודא שהם מתקינים את Timing ונרשמים
+באמצעות קוד אימות.</string>
+    <string name="clicktogetlink">לחץ על הקישור כדי להעתיק אותו ללוח ולשלוח אותו לעובד</string>
+    <string name="successfully_sent">נשלח בהצלחה</string>
+    <string name="when_would_you_like_to_send_your_employees_the_schedule">מתי תרצה
+?לשלוח לעובדים את הלו"ז</string>
+    <string name="scheduleregistration_note">זמן שליחת לוח הזמנים יעורר התראה באפליקציות העובדים שלך. לכן חשוב לשלוח אותו בזמן שבו אנשים בדרך כלל קוראים הודעות. מועד ההרשמה צריך להיות ארוך מספיק לאחר פתיחת ההרשמה כך שרוב העובדים יוכלו להירשם למשמרת שלהם בזמן.</string>
+    <string name="when_to_send_the_schedule">מתי לשלוח את הלו"ז</string>
+    <string name="registration_for_shifts_ends_at">...הרישום עד</string>
+    <string name="Select_Schedule_Time">בחר תזמן זמן</string>
+    <string name="start_of_registration_time">תחילת שעת ההרשמה</string>
+    <string name="apply">להגיש מועמדות</string>
+    <string name="Select_date_require">בחר תאריך נדרש</string>
+    <string name="Select_time_require">בחר זמן נדרש</string>
+    <string name="Registration_Start_Date">תאריך תחילת ההרשמה</string>
+    <string name="end_of_registration_time">סוף מועד ההרשמה</string>
+    <string name="Registration_End_Date">תאריך סיום ההרשמה</string>
+
+    <string name="Today">היום</string>
+    <string name="Select_registration_start_date_and_time">בחר תאריך ושעה לתחילת ההרשמה</string>
+    <string name="Select_registration_end_date_and_time">בחר תאריך סיום ושעה של רישום</string>
+    <string name="confirm_and_send_to_employees">קונפירם אנד סנד תו אמפלויעס</string>
+    <string name="previous_shift">משמרת\nקודמת</string>
+    <string name="next_shift">המשמרת\nהבאה</string>
+    <string name="search_by_name">חפש לפי שם</string>
+    <string name="no_user_found">לא נמצא משתמש</string>
+    <string name="already_exists_shift">משמרת זו כבר קיימת משתמשים אינך יכול לשלוח בקשה</string>
+    <string name="Select_hours_you_want">בחר שעות שאתה רוצה</string>
+    <string name="empty_shift_message">לוח הזמנים שלך ריק. לעולם לא תשלח בקשה למשמרת זו</string>
+    <string name="Manage_Request">נהל בקשה</string>
+    <string name="Select_the_time_when_worker_want_to_work">בחר את הזמן שבו העובד רוצה לעבוד</string>
+    <string name="Addition_hours">שעות תוספת</string>
+    <string name="Shift_Manager">מנהל משמרת</string>
+
+
+</resources>

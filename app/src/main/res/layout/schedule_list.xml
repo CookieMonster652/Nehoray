@@ -1,0 +1,457 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".UI.Manager.ScheduleList">
+
+        <include
+            android:id="@+id/Indicator"
+            layout="@layout/toolbar"/>
+
+        <ScrollView
+            app:layout_constraintBottom_toTopOf="@+id/InviteWorkerButton"
+            app:layout_constraintTop_toBottomOf="@+id/Indicator"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="match_parent"
+            android:scrollbars="none"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:layout_height="0dp">
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:padding="@dimen/_8sdp"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/SundayText"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:text="Sunday"
+                    android:fontFamily="@font/assistant_semibold"
+                    android:textColor="@color/carbon_black_87"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/SundayBox"
+                    app:layout_constraintTop_toBottomOf="@+id/SundayText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:id="@+id/SundayRecyclerView"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/SundayEdit"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        android:visibility="gone"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:background="@drawable/edittext_schedule_bg"
+                        app:layout_constraintDimensionRatio="1:.3"
+                        app:layout_constraintWidth_percent=".9"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp">
+
+                        <TextView
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            android:text="@string/click_to_edit"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <TextView
+                    android:id="@+id/MondayText"
+                    android:text="Monday"
+                    app:layout_constraintTop_toBottomOf="@+id/SundayBox"
+                    android:fontFamily="@font/assistant_semibold"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:textColor="@color/carbon_black_87"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/MondayBox"
+                    app:layout_constraintTop_toBottomOf="@+id/MondayText"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:id="@+id/MondayRecyclerView"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/MondayEdit"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        android:visibility="gone"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:background="@drawable/edittext_schedule_bg"
+                        app:layout_constraintDimensionRatio="1:.3"
+                        app:layout_constraintWidth_percent=".9"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp">
+
+                        <TextView
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            android:text="@string/click_to_edit"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                <TextView
+                    android:id="@+id/TuesdayText"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:text="Tuesday"
+                    app:layout_constraintTop_toBottomOf="@+id/MondayBox"
+                    android:fontFamily="@font/assistant_semibold"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:textColor="@color/carbon_black_87"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/TuesdayBox"
+                    app:layout_constraintTop_toBottomOf="@+id/TuesdayText"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:id="@+id/TuesdayRecyclerView"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/TuesdayEdit"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        android:visibility="gone"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:background="@drawable/edittext_schedule_bg"
+                        app:layout_constraintDimensionRatio="1:.3"
+                        app:layout_constraintWidth_percent=".9"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp">
+
+                        <TextView
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            android:text="@string/click_to_edit"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <TextView
+                    android:id="@+id/WednesdayText"
+                    app:layout_constraintTop_toBottomOf="@+id/TuesdayBox"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:text="Wednesday"
+                    android:fontFamily="@font/assistant_semibold"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:textColor="@color/carbon_black_87"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/WednesdayBox"
+                    app:layout_constraintTop_toBottomOf="@+id/WednesdayText"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:id="@+id/WednesdayRecyclerView"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/WednesdayEdit"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        android:visibility="gone"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:background="@drawable/edittext_schedule_bg"
+                        app:layout_constraintDimensionRatio="1:.3"
+                        app:layout_constraintWidth_percent=".9"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp">
+
+                        <TextView
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            android:text="@string/click_to_edit"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                <TextView
+                    android:id="@+id/ThursdayText"
+                    app:layout_constraintTop_toBottomOf="@+id/WednesdayBox"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:text="Thursday"
+                    android:fontFamily="@font/assistant_semibold"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:textColor="@color/carbon_black_87"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/ThursdayBox"
+                    app:layout_constraintTop_toBottomOf="@+id/ThursdayText"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:id="@+id/ThursdayRecyclerView"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/ThursdayEdit"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        android:visibility="gone"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:background="@drawable/edittext_schedule_bg"
+                        app:layout_constraintDimensionRatio="1:.3"
+                        app:layout_constraintWidth_percent=".9"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp">
+
+                        <TextView
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            android:text="@string/click_to_edit"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <TextView
+                    android:id="@+id/FridayText"
+                    app:layout_constraintTop_toBottomOf="@+id/ThursdayBox"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:text="Friday"
+                    android:fontFamily="@font/assistant_semibold"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:textColor="@color/carbon_black_87"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/FridayBox"
+                    app:layout_constraintTop_toBottomOf="@+id/FridayText"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:id="@+id/FridayRecyclerView"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/FridayEdit"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        android:visibility="gone"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:background="@drawable/edittext_schedule_bg"
+                        app:layout_constraintDimensionRatio="1:.3"
+                        app:layout_constraintWidth_percent=".9"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp">
+
+                        <TextView
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            android:text="@string/click_to_edit"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <TextView
+                    android:id="@+id/SaturdayText"
+                    app:layout_constraintTop_toBottomOf="@+id/FridayBox"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:text="Saturday"
+                    android:fontFamily="@font/assistant_semibold"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:textColor="@color/carbon_black_87"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/SaturdayBox"
+                    app:layout_constraintTop_toBottomOf="@+id/SaturdayText"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:id="@+id/SaturdayRecyclerView"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/SaturdayEdit"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        android:visibility="gone"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:background="@drawable/edittext_schedule_bg"
+                        app:layout_constraintDimensionRatio="1:.3"
+                        app:layout_constraintWidth_percent=".9"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp">
+
+                        <TextView
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            android:text="@string/click_to_edit"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </ScrollView>
+
+
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/InviteWorkerButton"
+            android:layout_width="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintWidth_percent=".9"
+            app:layout_constraintDimensionRatio="1:.15"
+            android:background="@drawable/button_bg"
+            app:shapeAppearanceOverlay="@style/shape_button"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginBottom="@dimen/_15sdp"
+            android:layout_height="0dp"/>
+
+        <TextView
+            app:layout_constraintTop_toTopOf="@id/InviteWorkerButton"
+            app:layout_constraintStart_toStartOf="@id/InviteWorkerButton"
+            app:layout_constraintEnd_toEndOf="@id/InviteWorkerButton"
+            app:layout_constraintBottom_toBottomOf="@id/InviteWorkerButton"
+            app:layout_constraintWidth_percent=".8"
+            android:layout_width="0dp"
+            android:singleLine="true"
+            android:gravity="center"
+            android:fontFamily="@font/assistant_semibold"
+            android:textColor="@color/white"
+            android:text="@string/invite_workers_for_this_schedule"
+            android:layout_height="wrap_content"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

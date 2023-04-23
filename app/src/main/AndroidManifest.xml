@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.time.timing">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:name="com.time.timing.Data.Application"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Time"
+        tools:targetApi="31">
+        <activity
+            android:name="com.time.timing.UI.Employees.EmployeesShifts"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/StatusBarColorEmployees" />
+        <activity
+            android:name="com.time.timing.UI.Manager.SuccessfullySendSchedule"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/StatusBarColorManager" />
+        <activity
+            android:name="com.time.timing.UI.Manager.RegistrationStartTime"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/StatusBarColorManager" />
+        <activity
+            android:name="com.time.timing.UI.Manager.RegistrationEndTime"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/StatusBarColorManager" />
+        <activity
+            android:name="com.time.timing.UI.Manager.AddEmployees"
+            android:exported="false"
+            android:windowSoftInputMode="adjustPan"
+            android:screenOrientation="portrait"
+            android:theme="@style/StatusBarColorManager" />
+        <activity
+            android:name="com.time.timing.UI.Manager.InviteEmployees"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan"
+            android:theme="@style/StatusBarColorManager" />
+        <activity
+            android:name="com.time.timing.UI.Manager.ScheduleList"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/StatusBarColorManager" />
+        <activity
+            android:name="com.time.timing.UI.Manager.CurrentWeek"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/StatusBarColorManager" />
+        <activity
+            android:name="com.time.timing.UI.Employees.EmployeeProfileName"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/StatusBarColorEmployees" />
+        <activity
+            android:name="com.time.timing.UI.Employees.Employeesotp"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/StatusBarColorEmployees" />
+        <activity
+            android:name="com.time.timing.UI.EmployeesHome.EmployeesHome"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/StatusBarColorEmployees" />
+        <activity
+            android:name="com.time.timing.UI.Manager.UploadBusinessLogo"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/StatusBarColorEmployees" />
+        <activity
+            android:name="com.time.timing.UI.Manager.ManagerBusinessProfile"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/StatusBarColorEmployees" />
+        <activity
+            android:name="com.time.timing.UI.ManagerHome.ManagerHome"
+            android:exported="false"
+            android:windowSoftInputMode="adjustPan"
+            android:screenOrientation="portrait"
+            android:theme="@style/StatusBarColorManager" />
+        <activity
+            android:name=".RegistrationShiftDate"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".SendScheduleTime"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.time.timing.UI.Manager.SendEmployeeSheduleTime"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/StatusBarColorManager" />
+        <activity
+            android:name="com.time.timing.UI.Manager.ImportEmployees"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan"
+            android:theme="@style/StatusBarColorManager" />
+        <activity
+            android:name="com.time.timing.UI.ManagerSignIn.SelectShift"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/StatusBarColorManager"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name="com.time.timing.UI.ManagerSignIn.EditWeek"
+            android:exported="false"
+            android:label="@string/title_activity_edit_week"
+            android:screenOrientation="portrait"
+            android:theme="@style/StatusBarColorEmployees" />
+        <activity
+            android:name="com.time.timing.UI.ManagerSignIn.SelectWeak"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.time.timing.UI.ManagerSignIn.ManagerOTP"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/StatusBarColorManager" />
+        <activity
+            android:name="com.time.timing.UI.Employees.ProfilePicUploadEmployee"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/StatusBarColorEmployees" />
+        <activity
+            android:name="com.time.timing.UI.ManagerSignIn.SignInForManager"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/StatusBarColorManager" />
+        <activity
+            android:name="com.time.timing.UI.Employees.SignInForEmployee"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/StatusBarColorEmployees" />
+        <activity
+            android:name="com.time.timing.LoginDifferentUser"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/StatusBarColorManager" />
+<!--
+        com.demotime.mytiming.SplashScreen
+        .UI.Manager.ImportEmployees
+-->
+
+        <activity
+            android:name="com.time.timing.SplashScreen"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/StatusBarColorManager">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

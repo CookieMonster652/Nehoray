@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".UI.Manager.InviteEmployees">
+
+        <include
+            android:id="@+id/Toolbar"
+            layout="@layout/toolbar" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:background="#F9F9F9"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Toolbar">
+
+
+            <TextView
+                android:id="@+id/InviteDateOf"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:fontFamily="@font/assistant_bold"
+                android:gravity="center"
+                android:textColor="@color/carbon_black_87"
+                android:textSize="@dimen/_14ssp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintWidth_percent=".9" />
+
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/ImportEmployeesBtn"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="@drawable/button_bg"
+                app:layout_constraintBottom_toTopOf="@+id/EmployeesDetails"
+                app:layout_constraintDimensionRatio="1:.2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/InviteDateOf"
+                app:layout_constraintWidth_percent=".8"
+                app:shapeAppearanceOverlay="@style/shape_button" />
+
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/assistant_semibold"
+                android:gravity="center"
+                android:singleLine="true"
+                android:text="@string/import_employees_from_contact"
+                android:textColor="@color/white"
+                app:layout_constraintBottom_toBottomOf="@+id/ImportEmployeesBtn"
+                app:layout_constraintEnd_toEndOf="@+id/ImportEmployeesBtn"
+                app:layout_constraintStart_toStartOf="@+id/ImportEmployeesBtn"
+                app:layout_constraintTop_toTopOf="@+id/ImportEmployeesBtn"
+                app:layout_constraintWidth_percent=".7" />
+
+            <TextView
+                android:id="@+id/EmployeesDetails"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:fontFamily="@font/sssistant_regular"
+                android:text="@string/invite_employees_text"
+                app:layout_constraintBottom_toTopOf="@+id/CopyBtn"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ImportEmployeesBtn"
+                app:layout_constraintWidth_percent=".9" />
+
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/CopyBtn"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginBottom="@dimen/_20sdp"
+                android:background="@drawable/uploadprofilepicbutton_bg"
+                app:layout_constraintBottom_toTopOf="@+id/BottomInfo"
+                app:layout_constraintDimensionRatio="1:.2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintWidth_percent=".7"
+                app:shapeAppearanceOverlay="@style/shape_button" />
+
+
+            <TextView
+                android:id="@+id/AppLink"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/assistant_semibold"
+                android:gravity="center"
+                android:singleLine="true"
+                android:ellipsize="marquee"
+                android:marqueeRepeatLimit="marquee_forever"
+                android:scrollHorizontally="true"
+                android:text="WWW.google.com"
+                app:layout_constraintBottom_toBottomOf="@+id/CopyBtn"
+                app:layout_constraintEnd_toEndOf="@+id/CopyBtn"
+                app:layout_constraintStart_toStartOf="@+id/CopyBtn"
+                app:layout_constraintTop_toTopOf="@+id/CopyBtn"
+                app:layout_constraintWidth_percent=".6" />
+
+
+            <TextView
+                android:id="@+id/BottomInfo"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_15sdp"
+                android:fontFamily="@font/assistant_semibold"
+                android:gravity="center"
+                android:text="@string/clicktogetlink"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintWidth_percent=".9" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

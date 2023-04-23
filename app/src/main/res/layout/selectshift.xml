@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="SetDateText"
+            type="String" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".UI.ManagerSignIn.SelectShift">
+
+        <include
+            android:id="@+id/Toolbar"
+            layout="@layout/toolbar" />
+
+        <View
+            android:id="@+id/view2"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:background="#F9F9F9"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Toolbar" />
+
+
+        <TextView
+            android:id="@+id/SelectDate"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:fontFamily="@font/assistant_semibold"
+            android:gravity="center"
+            android:singleLine="true"
+            app:layout_constraintTop_toBottomOf="@+id/Toolbar"
+            android:text="@{SetDateText}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintWidth_percent=".9" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/RecyclerViewAddShift"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/ApplyShift"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginBottom="@dimen/_5sdp"
+            app:layout_constraintTop_toBottomOf="@+id/SelectDate"
+            app:layout_constraintWidth_percent=".9" />
+
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/ApplyShift"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:background="@drawable/uploadprofilepicbutton_bg"
+            app:layout_constraintBottom_toTopOf="@+id/ApplyAdditionalShift"
+            app:layout_constraintDimensionRatio="1:.15"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintWidth_percent=".9" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/assistant_semibold"
+            android:text="@string/apply_additional_shift"
+            android:textColor="@color/carbon_black_87"
+            app:layout_constraintBottom_toBottomOf="@+id/ApplyShift"
+            app:layout_constraintEnd_toEndOf="@+id/ApplyShift"
+            app:layout_constraintStart_toStartOf="@+id/ApplyShift"
+            app:layout_constraintTop_toTopOf="@+id/ApplyShift" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/ApplyAdditionalShift"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:background="@color/white"
+            app:layout_constraintBottom_toTopOf="@+id/ShowWeeklyScheduleButton"
+            app:layout_constraintDimensionRatio="1:.15"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintWidth_percent=".9"
+            app:shapeAppearanceOverlay="@style/shape_button" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/assistant_semibold"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="@string/apply_shift_to_additional_days"
+            android:textColor="@color/carbon_black_87"
+            app:layout_constraintBottom_toBottomOf="@+id/ApplyAdditionalShift"
+            app:layout_constraintEnd_toEndOf="@+id/ApplyAdditionalShift"
+            app:layout_constraintStart_toStartOf="@+id/ApplyAdditionalShift"
+            app:layout_constraintTop_toTopOf="@+id/ApplyAdditionalShift"
+            app:layout_constraintWidth_percent=".8" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/ShowWeeklyScheduleButton"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:background="@drawable/button_bg"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintDimensionRatio="1:.15"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintWidth_percent=".9"
+            app:shapeAppearanceOverlay="@style/shape_button" />
+
+        <ImageView
+            android:id="@+id/BackIcon"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:src="@drawable/ic_baseline_arrow_back_24"
+            app:layout_constraintBottom_toBottomOf="@+id/ShowWeeklyScheduleButton"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintEnd_toStartOf="@+id/ScheduleText"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="@+id/ShowWeeklyScheduleButton"
+            app:layout_constraintTop_toTopOf="@+id/ShowWeeklyScheduleButton"
+            app:layout_constraintWidth_percent=".07"
+            app:tint="@color/white" />
+
+        <TextView
+            android:id="@+id/ScheduleText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:fontFamily="@font/assistant_semibold"
+            android:text="@string/show_weekly_schedule"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="@+id/ShowWeeklyScheduleButton"
+            app:layout_constraintEnd_toEndOf="@+id/ShowWeeklyScheduleButton"
+            app:layout_constraintStart_toEndOf="@+id/BackIcon"
+            app:layout_constraintTop_toTopOf="@+id/ShowWeeklyScheduleButton" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

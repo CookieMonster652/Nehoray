@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/PersonalInfo"
+        android:icon="@drawable/ic_user"
+        android:title="@string/personal_info"
+        app:cnb_backgroundColor="@color/white"
+        app:cnb_iconColor="@color/carbon_black_54"
+        app:cnb_textColor="@color/carbon_black_54"/>
+
+
+
+    <item
+        android:id="@+id/DailySchedule"
+        android:icon="@drawable/ic_calender"
+        android:title="@string/daily_schedule"
+        app:cnb_backgroundColor="@color/white"
+        app:cnb_iconColor="@color/carbon_black_54"
+        app:cnb_textColor="@color/carbon_black_54"/>
+
+
+
+</menu>

@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_7sdp">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/Root"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/managerequestbg"
+            android:padding="@dimen/_10sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/ShiftName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/sssistant_regular"
+                android:text="First Shift"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_14ssp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/Time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_marginBottom="@dimen/_20sdp"
+                android:text="15:00 - 22:00"
+                android:textColor="@color/white"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ShiftName" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/ConfirmShiftBtn"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="@dimen/_10sdp"
+            app:layout_constraintBottom_toBottomOf="@+id/Root"
+            app:layout_constraintHeight_percent=".3"
+            android:elevation="@dimen/_5sdp"
+            android:background="#AC8D3C"
+            app:shapeAppearanceOverlay="@style/shape_button"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Root"
+            app:layout_constraintWidth_percent=".35" />
+
+
+        <TextView
+            app:layout_constraintTop_toTopOf="@id/ConfirmShiftBtn"
+            app:layout_constraintStart_toStartOf="@id/ConfirmShiftBtn"
+            app:layout_constraintBottom_toBottomOf="@id/ConfirmShiftBtn"
+            app:layout_constraintEnd_toEndOf="@id/ConfirmShiftBtn"
+            android:textColor="@color/white"
+            android:elevation="@dimen/_5sdp"
+            android:text="Confirm shift"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/RefuseShiftBtn"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="@+id/Root"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:elevation="@dimen/_5sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHeight_percent=".3"
+            android:background="#F9F9F9"
+            app:shapeAppearanceOverlay="@style/shape_button"
+            app:layout_constraintTop_toBottomOf="@+id/Root"
+            app:layout_constraintWidth_percent=".35" />
+
+        <TextView
+            app:layout_constraintTop_toTopOf="@id/RefuseShiftBtn"
+            app:layout_constraintBottom_toBottomOf="@id/RefuseShiftBtn"
+            app:layout_constraintStart_toStartOf="@id/RefuseShiftBtn"
+            app:layout_constraintEnd_toEndOf="@id/RefuseShiftBtn"
+            android:text="Refuse"
+            android:textColor="#015052"
+            android:elevation="@dimen/_5sdp"
+            android:fontFamily="@font/sssistant_regular"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

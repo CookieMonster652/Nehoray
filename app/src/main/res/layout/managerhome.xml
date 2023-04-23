@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="Title"
+            type="String" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".UI.ManagerHome.ManagerHome">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/Toolbar"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:background="@color/ManagerBackGround"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize">
+
+            <TextView
+                android:id="@+id/Title"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:singleLine="true"
+                android:textColor="@color/white"
+                android:fontFamily="@font/roboto_medium"
+                android:text="@{Title}"
+                android:layout_width="0dp"
+                app:layout_constraintWidth_percent=".9"
+                android:gravity="center"
+                android:layout_height="wrap_content"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <FrameLayout
+            android:id="@+id/FrameLayoutManager"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Toolbar"
+            app:layout_constraintBottom_toTopOf="@+id/ChipNavigationBar"
+            android:layout_width="0dp"
+            android:layout_height="0dp"/>
+
+        <com.ismaeldivita.chipnavigation.ChipNavigationBar
+            android:id="@+id/ChipNavigationBar"
+            app:layout_constraintHeight_percent=".09"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:shadowColor="@color/carbon_black_54"
+            android:elevation="@dimen/_1sdp"
+            app:cnb_menuResource="@menu/manager_menu"
+            app:cnb_unselectedColor="@color/carbon_white_70"
+            android:background="@color/ManagerBackGround"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

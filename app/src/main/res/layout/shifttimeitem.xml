@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+
+        
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            style="@style/shape_button"
+            android:padding="@dimen/_7sdp"
+            android:background="@drawable/shiftbg"
+            android:layout_width="@dimen/_150sdp"
+            android:layout_height="0dp">
+
+
+            <TextView
+                android:id="@+id/Time"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:singleLine="true"
+                android:fontFamily="@font/assistant_semibold"
+                android:text="10:00 - 15:00"
+                android:gravity="center"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"/>
+
+
+            <View
+                android:id="@+id/View"
+                app:layout_constraintTop_toBottomOf="@+id/Time"
+                android:layout_width="0dp"
+                android:layout_marginTop="@dimen/_15sdp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:background="@color/white"
+                app:layout_constraintWidth_percent=".9"
+                android:layout_height="0.8dp"/>
+
+            <TextView
+                android:id="@+id/ShiftName"
+                app:layout_constraintTop_toBottomOf="@+id/View"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:text="First Shift"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:fontFamily="@font/assistant_semibold"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
